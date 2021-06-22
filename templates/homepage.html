@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body, html {
+background-color: #2d3436;
+background-image: linear-gradient(315deg, #2d3436 0%, #000000 74%);
+  height: 100%;
+  margin: 0;
+  font: 400 15px/1.8 "Lato", sans-serif;
+  color: #777;
+}
+
+h1 {
+  text-align: center;
+  font: bold 70px Sans-Serif;
+  padding: 40px 0;
+}
+.otto {
+  color: white;
+  text-shadow: 0 1px 0 #ccc,
+               0 2px 0 #c9c9c9,
+               0 6px 1px rgba(0,0,0,.1),
+               0 0 5px rgba(0,0,0,.1),
+               0 1px 3px rgba(0,0,0,.3),
+               0 3px 5px rgba(0,0,0,.2),
+               0 5px 10px rgba(0,0,0,.15),
+               0 10px 10px rgba(0,0,0,.2),
+               0 10px 10px rgba(0,0,0,.15);
+}
+.caption {
+  position: absolute;
+  left: 0;
+  top: 10%;
+  width: 100%;
+  text-align: center;
+  color: #000;
+}
+
+.caption span.border {
+  color: #fff;
+  padding: 18px;
+  font-size: 40px;
+  letter-spacing: 10px;
+}
+.button {
+  padding: 15px 25px;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #04AA6D;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #fff;
+}
+
+.button:hover {background-color: #2d3436;box-shadow: 0 9px #04AA6D;}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #fff;
+  transform: translateY(4px);
+}
+#button1 {
+float: left;
+max-width: 30%;
+overflow: hidden;
+}
+#button2 {
+float: right;
+max-width: 30%;
+overflow: hidden;
+}
+.container{
+    text-align: center;
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="center">
+    <h1 class="otto">ESE Data Analysis</h1><br>
+    <a class="button",id="button1" href="{% url 'sasbForm' %}">SASB</a>
+    <a class="button",id="button2" href="{% url 'griForm' %}">GRI</a>
+  </div>
+</div>
+</body>
+</html>

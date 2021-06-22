@@ -1,0 +1,61 @@
+<html>
+<head>
+<style>
+        #graphButton {
+            text-decoration: none;
+            color: black;
+        }
+    </style>
+    <script type="text/javascript">
+submitForms = function(){
+    document.getElementById("form1").submit();
+    alert("Data Inserted Successfully..");
+}
+    </script>
+</head>
+<body>
+<form action="" method = "GET" id="form1">
+  <fieldset>
+    <legend>Materials</legend>
+    <label for="non_renewable_materials_used">non-renewable materials used: </label>
+    <input type="text" name="non_renewable_materials_used"><br><br>
+    <label for="renewable_materials_used">renewable materials used: </label>
+    <input type="text"  name="renewable_materials_used"><br><br>
+    <label for="recycled_percentage">Percentage of recycled input materials used to manufacture the organization’s primary products and services: </label>
+    <input type="text" name="recycled_percentage"><br><br>
+  </fieldset>
+
+  <fieldset>
+    <legend>Energy</legend>
+    <label for="fuel_consumption_with_non_renewable_sources">Total fuel consumption within the organization from non-renewable sources, in joules or multiples, and including fuel types used: </label>
+    <input type="text" name="fuel_consumption_with_non_renewable_sources"><br><br>
+    <label for="fuel_consumption_with_renewable_sources">b. Total fuel consumption within the organization from renewable sources, in joules or multiples, and including fuel types used: </label>
+    <input type="text" name="fuel_consumption_with_renewable_sources"><br><br>
+  </fieldset>
+  <fieldset>
+    <legend>Water and Effluents</legend>
+    <p>Total water withdrawal from all areas in megaliters, and a breakdown of this total by the following sources, if applicable </p>
+    <label for="surface_water_withdrawal_megaliters">Surface water: </label>
+    <input type="text" name="surface_water_withdrawal_megaliters"><br><br>
+    <label for="ground_water_withdrawal_megaliters">Ground water: </label>
+    <input type="text" name="ground_water_withdrawal_megaliters"><br><br>
+    <p>Total water withdrawal from all areas with water stress in megaliters, and a breakdown of this total by the following sources, if applicable </p>
+    <label for="surface_water_withdrawal_with_watre_stress">Surface water: </label>
+    <input type="text" name="surface_water_withdrawal_with_watre_stress"><br><br>
+    <label for="ground_water_withdrawal_with_watre_stress">Ground water: </label>
+    <input type="text" name="ground_water_withdrawal_with_watre_stress"><br><br>
+  </fieldset>
+    <fieldset>
+    <legend>Year</legend>
+    <p> Data belongs to which year </p>
+    <label for="year">Year: </label>
+    <input type="text" name="year"><br><br>
+  </fieldset>
+</form>
+<input type="button" value="Click Me!" onclick="submitForms()" />
+<button type="button">
+    <a id='graphButton' href="{% url 'chartsPage' %}">Show Graphs</a>
+</button>
+</a>
+</body>
+</html>

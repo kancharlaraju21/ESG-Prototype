@@ -1,0 +1,29 @@
+<html>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<body>
+<form method='POST'>
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type='submit' value='submit'>
+</form>
+<div>
+  <canvas id="myChart" height="150" width="400"></canvas>
+</div>
+</body>
+<script>
+  // === include 'setup' then 'config' above ===
+    const labels = {{countryCode|safe}};
+    const data = {
+    labels: labels,
+    datasets: {{dataSetRj|safe}}}
+const config = {
+    type: 'line',
+    data,
+    options: {}
+    };
+  var myChart = new Chart(
+    document.getElementById('myChart'),
+    config
+  );
+</script>
+</html>
