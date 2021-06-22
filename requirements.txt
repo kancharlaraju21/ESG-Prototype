@@ -68,7 +68,6 @@ six==1.16.0
 sqlparse==0.4.1
 terminado==0.10.1
 testpath==0.5.0
-tkMagicGrid==1.0.3
 tornado==6.1
 traitlets==5.0.5
 ujson==4.0.2
