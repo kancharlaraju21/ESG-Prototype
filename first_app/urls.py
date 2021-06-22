@@ -26,4 +26,5 @@ urlpatterns = [
     # path('',home,name='Raju'),
     # path('demo/',demo,name='demo'),
     path('admin/', admin.site.urls),
+
 ]
