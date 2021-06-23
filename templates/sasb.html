@@ -1,7 +1,47 @@
 <html>
 <head>
+<style>
+        #graphButton {
+            text-decoration: none;
+            color: black;
+        }
+    </style>
+    <script type="text/javascript">
+submitForms = function(){
+    document.getElementById("form1").submit();
+    alert("Data Inserted Successfully..");
+}
+    </script>
 </head>
 <body>
-    <h1>Not Developed Yet..</h1>
+<div style="text-align:center;">
+<h3>Database server down.. Dont submit any data for now..</h3>
+</div>
+<form action="" method = "GET" id="form1">
+  <fieldset>
+    <legend>Energy Management</legend>
+    <label for="total_energy_consumed">Total energy consumed : </label>
+    <input type="text" name="total_energy_consumed"><br><br>
+    <label for="percentage_grid_electricity">percentage grid electricity : </label>
+    <input type="text"  name="percentage_grid_electricity"><br><br>
+    <label for="percentage_renewable">percentage renewable : </label>
+    <input type="text" name="percentage_renewable"><br><br>
+  </fieldset>
+
+  <fieldset>
+    <legend>Hazardous Waste Management</legend>
+    <label for="amount_of_hazardous_waste_generated">Amount of hazardous waste generated: </label>
+    <input type="text" name="amount_of_hazardous_waste_generated"><br><br>
+    <label for="number_and_aggregate_quantity_of_reportable_spills">Number and aggregate quantity of reportable spills: </label>
+    <input type="text" name="number_and_aggregate_quantity_of_reportable_spills"><br><br>
+    <label for="quantity_recovered">Quantity recovered: </label>
+    <input type="text" name="quantity_recovered"><br><br>
+  </fieldset>
+</form>
+<input type="button" value="Click Me!" onclick="submitForms()" />
+<button type="button">
+    <a id='graphButton' href="{% url 'chartsPage' %}">Show Graphs</a>
+</button>
+</a>
 </body>
 </html>

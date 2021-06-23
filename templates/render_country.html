@@ -1,6 +1,9 @@
 <html>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <body>
+<div style="text-align:center;">
+<h3>Choose the required Options and Click Submit to re-generate graph</h3>
+</div>
 <form method='POST'>
     {% csrf_token %}
     {{ form.as_p }}

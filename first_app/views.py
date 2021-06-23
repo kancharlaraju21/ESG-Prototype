@@ -9,6 +9,16 @@ def homePage(request):
     return render(request,'homepage.html')
 
 def sasbForm(request):
+    print(request.GET)
+    data=request.GET.items()
+    if len(dict(request.GET.items())) > 0:
+        print('I am entered')
+        if(os.path.isfile('sasb_data.csv')):
+            df = pd.DataFrame(data).T.iloc[1:]
+            df.to_csv('sasb_data.csv',mode='a',index = False, header=False)
+        else:
+            df = pd.DataFrame(data).T
+            df.to_csv('sasb_data.csv',index = False, header=False)
     return render(request,'sasb.html')
 
 def griForm(request):
@@ -23,6 +33,7 @@ def griForm(request):
             df = pd.DataFrame(data).T
             df.to_csv('gri_data.csv',index = False, header=False)
     return render(request,'gri.html')
+
 
 def renderingGraph(request):
     df = pd.read_csv('D:/ESG_Prototype/datasets/ESGData.csv')
